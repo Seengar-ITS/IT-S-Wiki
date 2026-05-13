@@ -4,7 +4,7 @@ on:
     branches: [main]
   schedule:
     - cron: '0 */6 * * *'
-# Deployed: 2026-05-13T23:28:47.838Z
+# Deployed: 2026-05-13T23:35:06.213Z
 jobs:
   health:
     runs-on: ubuntu-latest
@@ -12,8 +12,5 @@ jobs:
       - name: Check live URL
         run: |
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://it-s-wiki.vercel.app)
-          if [ "$STATUS" -ne 200 ]; then
-            echo "Service DOWN: $STATUS"
-            exit 1
-          fi
-          echo "Service LIVE: $STATUS"
+          if [ "$STATUS" -ne 200 ]; then echo "DOWN: $STATUS"; exit 1; fi
+          echo "LIVE: $STATUS"
