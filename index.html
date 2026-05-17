@@ -7,9 +7,28 @@
     <title>IT S Wiki</title>
     <meta name="description" content="IT S Wiki — Part of the IT-S Universe" />
     <!-- ts: 2026-05-15T05:33:00Z -->
-  </head>
+    <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#00ff88">
+  <meta name="application-name" content="IT-S Wiki">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ITS Wiki">
+  <meta name="msapplication-TileColor" content="#00ff88">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="description" content="IT-S Universe — Wiki — Pakistan">
+  <meta property="og:title" content="IT-S Wiki">
+  <meta property="og:description" content="IT-S Universe — Pakistan">
+  <meta property="og:image" content="/icon-512.png">
+  <meta property="og:type" content="website">
+</head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}))}</script>
+</body>
 </html>
